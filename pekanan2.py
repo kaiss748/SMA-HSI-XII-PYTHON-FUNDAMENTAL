@@ -13,7 +13,6 @@ daftar_harga_barang = []
 daftar_jumlah_barang = []
 
 while True:
-    #nantinya diisi oleh nama barang, harga, jumlah
     nama_barang = input("Nama Barang : ")
     if nama_barang.lower() == 'selesai':
         print("\nMenghitung total belanja anda...\n")
@@ -31,7 +30,7 @@ while True:
 
     except ValueError:
         print("Input harga dan jumlah harus berupa angka! Silakan ulangi.\n")
-        continue  # kembali ke atas loop untuk input ulang
+        continue 
     
 
 def hitung_subtotal(daftar_harga, daftar_jumlah):
@@ -75,7 +74,6 @@ total_diskon, persen_diskon, total_bayar):
 
 subtotal = hitung_subtotal(daftar_harga_barang, daftar_jumlah_barang)
 persen_diskon, total_diskon, total_bayar = hitung_diskon(subtotal)
-# total_bayar = subtotal - total_diskon
 
 tampilan_struk(daftar_nama_barang, daftar_harga_barang, daftar_jumlah_barang, subtotal,
 total_diskon, persen_diskon, total_bayar)
